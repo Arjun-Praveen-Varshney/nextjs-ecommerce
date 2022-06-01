@@ -11,9 +11,9 @@ const terms = () => {
             </h2>
             <p className="px-10 py-2">
               These terms and conditions outline the rules and regulations for
-              the use of Codeswears Website, located at www.codeswear.com. By
+              the use of ecommerces Website, located at www.ecommerce.com. By
               accessing this website we assume you accept these terms and
-              conditions. Do not continue to use codeswear.com if you do not
+              conditions. Do not continue to use ecommerce.com if you do not
               agree to take all of the terms and conditions stated on this page.
               All terms refer to the offer, acceptance and consideration of
               payment necessary to undertake the process of our assistance to
@@ -27,8 +27,8 @@ const terms = () => {
             </p>
             <h1 className="mx-10 font-semibold text-2xl">Cookies</h1>
             <p className="px-10 py-2">
-              We employ the use of cookies. By accessing codeswear.com, you
-              agreed to use cookies in agreement with the Codeswears Privacy
+              We employ the use of cookies. By accessing ecommerce.com, you
+              agreed to use cookies in agreement with the ecommerces Privacy
               Policy. Most interactive websites use cookies to let us retrieve
               the users details for each visit. Cookies are used by our website
               to enable the functionality of certain areas to make it easier for
@@ -37,22 +37,22 @@ const terms = () => {
             </p>
             <h1 className="mx-10 font-semibold text-2xl">License</h1>
             <p className="px-10 py-2">
-              Unless otherwise stated, Codeswear and/or its licensors own the
-              intellectual property rights for all material on codeswear.com.
+              Unless otherwise stated, ecommerce and/or its licensors own the
+              intellectual property rights for all material on ecommerce.com.
               All intellectual property rights are reserved. You may access this
-              from codeswear.com for your own personal use subjected to
+              from ecommerce.com for your own personal use subjected to
               restrictions set in these terms and conditions.
             </p>
             <div>
               <p className="mb-4 mx-10 font-semibold">You must not:</p>
-              <li className="ml-10">Republish material from codeswear.com</li>
+              <li className="ml-10">Republish material from ecommerce</li>
               <li className="ml-10">
-                Sell, rent or sub-license material from codeswear.com
+                Sell, rent or sub-license material from ecommerce
               </li>
               <li className="ml-10">
-                Reproduce, duplicate or copy material from codeswear.com
+                Reproduce, duplicate or copy material from ecommerce
               </li>
-              <li className="ml-10">Redistribute content from codeswear.com</li>
+              <li className="ml-10">Redistribute content from ecommerce</li>
             </div>
             <h1 className="mx-10 my-2">
               This Agreement shall begin on the date hereof.
@@ -60,15 +60,15 @@ const terms = () => {
             <p className="mx-10 my-2 ">
               Parts of this website offer an opportunity for users to post and
               exchange opinions and information in certain areas of the website.
-              Codeswear does not filter, edit, publish or review Comments prior
+              ecommerce does not filter, edit, publish or review Comments prior
               to their presence on the website. Comments do not reflect the
-              views and opinions of Codeswear,its agents and/or affiliates.
+              views and opinions of ecommerce,its agents and/or affiliates.
               Comments reflect the views and opinions of the person who post
               their views and opinions. To the extent permitted by applicable
-              laws, Codeswear shall not be liable for the Comments or for any
+              laws, ecommerce shall not be liable for the Comments or for any
               liability, damages or expenses caused and/or suffered as a result
               of any use of and/or posting of and/or appearance of the Comments
-              on this website. Codeswear reserves the right to monitor all
+              on this website. ecommerce reserves the right to monitor all
               Comments and to remove any Comments which can be considered
               inappropriate, offensive or causes peach of these Terms and
               Conditions.
@@ -98,7 +98,7 @@ const terms = () => {
               </li>
               <p className="mx-10 my-2">
                 {" "}
-                You hereby grant Codeswear a non-exclusive license to use,
+                You hereby grant ecommerce a non-exclusive license to use,
                 reproduce, edit and authorize others to use, reproduce and edit
                 any of your Comments in any and all forms, formats or media.
               </p>
@@ -160,14 +160,14 @@ const terms = () => {
               ourselves or to our accredited businesses; (b) the organization
               does not have any negative records with us; (c) the benefit to us
               from the visibility of the hyperlink compensates the absence of
-              Codeswear; and (d) the link is in the context of general resource
+              ecommerce; and (d) the link is in the context of general resource
               information. These organizations may link to our home page so long
               as the link: (a) is not in any way deceptive; (b) does not falsely
               imply sponsorship, endorsement or approval of the linking party
               and its products or services; and (c) fits within the context of
               the linking partys site. If you are one of the organizations
               listed in paragraph 2 above and are interested in linking to our
-              website, you must inform us by sending an e-mail to Codeswear.
+              website, you must inform us by sending an e-mail to ecommerce.
               Please include your name, your organization name, contact
               information as well as the URL of your site, a list of any URLs
               from which you intend to link to our Website, and a list of the
@@ -188,7 +188,7 @@ const terms = () => {
                 linking partys site.
               </li>
               <p className="ml-10 mt-4">
-                No use of Codeswears logo or other artwork will be allowed for
+                No use of ecommerces logo or other artwork will be allowed for
                 linking absent a trademark license agreement.
               </p>
             </div>
@@ -216,39 +216,44 @@ const terms = () => {
               may attempt to notify you by contacting the e-mail and/or billing
               address/phone number provided at the time the order was made.
             </p>
-            In case the order is cancelled, 100% refund will be issued to the
-            customer We reserve the right to limit or prohibit orders that, in
-            our sole judgment, appear to be placed by dealers, resellers or
-            distributors.
+            <p>
+              In case the order is cancelled, 100% refund will be issued to the
+              customer We reserve the right to limit or prohibit orders that, in
+              our sole judgment, appear to be placed by dealers, resellers or
+              distributors.
+            </p>
             <p>
               We shall not be liable for delay or failure to perform our
               obligations under these Terms if such delay or failure is due to
               any cause or conditions beyond our reasonable anticipation or
               control
             </p>
-            Such causes or conditions shall include, without limitation, acts of
-            God or of the public enemy, acts of any government or any authority
-            or public body thereof in either their sovereign or contractual
-            capacity, strikes, refusal or inability of a common carrier to
-            provide communications capabilities (for example, but not limited
-            to, internet services, email services, telephone and messaging
-            services), shortages of labour, energy or materials, freight
-            embargoes, delays in transportation, unusually severe weather,
-            earthquake, flood, fire, notified epidemic resulting in lockdown of
-            the area of Our offices, or resulting in the closure of our
-            office(s) whether by the order of the authorities or as a matter of
-            abundant caution on our part, valid court order, or any delay or
-            failure to perform by any supplier or sub-contractor resulting from
-            any of the above or other circumstances beyond our reasonable
-            control and against which we could not reasonably have protected
-            ourselves, such events constituting a condition of Force Majeure. We
-            will attempt to notify you, on best-effort basis, at the earliest
-            practicable time, identifying the Force Majeure event, the date of
-            its occurrence and the tentative date up to which the Force Majeure
-            event is expected to continue; however, such notification is not a
-            necessary pre-condition to the event being identifiable as a Force
-            Majeure event and the tentative date is not an assurance or binding
-            on us, and is provided only as a goodwill gesture.
+            <p>
+              Such causes or conditions shall include, without limitation, acts
+              of God or of the public enemy, acts of any government or any
+              authority or public body thereof in either their sovereign or
+              contractual capacity, strikes, refusal or inability of a common
+              carrier to provide communications capabilities (for example, but
+              not limited to, internet services, email services, telephone and
+              messaging services), shortages of labour, energy or materials,
+              freight embargoes, delays in transportation, unusually severe
+              weather, earthquake, flood, fire, notified epidemic resulting in
+              lockdown of the area of Our offices, or resulting in the closure
+              of our office(s) whether by the order of the authorities or as a
+              matter of abundant caution on our part, valid court order, or any
+              delay or failure to perform by any supplier or sub-contractor
+              resulting from any of the above or other circumstances beyond our
+              reasonable control and against which we could not reasonably have
+              protected ourselves, such events constituting a condition of Force
+              Majeure. We will attempt to notify you, on best-effort basis, at
+              the earliest practicable time, identifying the Force Majeure
+              event, the date of its occurrence and the tentative date up to
+              which the Force Majeure event is expected to continue; however,
+              such notification is not a necessary pre-condition to the event
+              being identifiable as a Force Majeure event and the tentative date
+              is not an assurance or binding on us, and is provided only as a
+              goodwill gesture.
+            </p>
             <p>
               Our obligations under these Terms shall cease for the period of
               Force Majeure, and shall resume on the date such Force Majeure

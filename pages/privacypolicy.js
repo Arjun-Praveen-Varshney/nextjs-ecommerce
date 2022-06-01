@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const privacypolicy = () => {
   return (
@@ -42,8 +43,8 @@ const privacypolicy = () => {
                 </li>
                 <li>
                   <p>
-                    <strong>Company</strong> refers to Codeswear, Rampur,
-                    Uttarpradesh.
+                    <strong>Company</strong> refers to ecommerce, Panvel,
+                    Maharashtra.
                   </p>
                 </li>
                 <li>
@@ -56,7 +57,7 @@ const privacypolicy = () => {
                 </li>
                 <li>
                   <p>
-                    <strong>Country</strong> refers to: Uttar Pradesh, India
+                    <strong>Country</strong> refers to: Maharashtra, India
                   </p>
                 </li>
                 <li>
@@ -104,15 +105,7 @@ const privacypolicy = () => {
                 </li>
                 <li>
                   <p>
-                    <strong>Website</strong> refers to Codeswear, accessible
-                    from{" "}
-                    <a
-                      href="https://www.codeswear.com"
-                      rel="external nofollow noopener noreferrer"
-                      target="_blank"
-                    >
-                      https://www.codeswear.com
-                    </a>
+                    <strong>Website</strong> refers to this ecommerce website.
                   </p>
                 </li>
                 <li>
@@ -256,7 +249,6 @@ const privacypolicy = () => {
                 >
                   Use of Cookies by Free Privacy Policy
                 </a>
-                .
               </p>
               <p>
                 We use both Session and Persistent Cookies for the purposes set
@@ -586,13 +578,9 @@ const privacypolicy = () => {
               <ul>
                 <li>
                   By visiting this page on our website:{" "}
-                  <a
-                    href="https://ww.codeswear.com/privacy"
-                    rel="external nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    https://ww.codeswear.com/contact
-                  </a>
+                  <Link href="/contact">
+                    <a>Contact Us</a>
+                  </Link>
                 </li>
               </ul>
             </div>

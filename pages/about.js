@@ -17,14 +17,14 @@ const About = () => {
                 Welcome to Ecommerce
               </h1>
               <p className="mb-8 leading-relaxed">
-                This website is an attempt to deliver amazing products at a good
-                and reasonable price. This entire website was built on a YouTube
-                series as a NextJs course project. This website is powerd by
-                NextJs + React + MongoDB for storing the data. For the server
-                side logic, we use NextJs built in SSR. If you are curious
-                enough to find how this website was build, checkout Nextjs
-                playlist from CodeWithHarry on YouTube and if you are not, buy
-                yourself a trendy geek Tshirt from CodesWear ;) !
+                This sample website is an attempt to deliver amazing sample
+                products at a good and reasonable price. This entire website was
+                built on a YouTube series as a NextJs course project. This
+                website is powered by NextJs + Strapi + Postgres for storing the
+                data. For the server side logic, we use NextJs built in SSR. If
+                you are curious enough to find how this website was build,
+                checkout Nextjs playlist from CodeWithHarry on YouTube and if
+                you are not, buy yourself a trendy geek Tshirt from ecommerce!
               </p>
               <div className="flex justify-center">
                 <Link href={"/tshirts"}>
@@ -50,11 +50,11 @@ const About = () => {
             search of your favorite geek hoodie when you can find it on the
             Internet in a single click? Not only hoodies, we also have a wide
             variety of stickers, mugs and other apparels!
-            <p>
-              If you are wondering why you should shop from Codeswear when there
-              are multiple options available to you, our unique designs and
-              quality products will answer your question.
-            </p>
+          </p>
+          <p>
+            If you are wondering why you should shop from ecommerce when there
+            are multiple options available to you, our unique designs and
+            quality products will answer your question.
           </p>
         </section>
       </div>
