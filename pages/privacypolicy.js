@@ -1,9 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const privacypolicy = () => {
   return (
     <>
+      <Head>
+        <title>Privacy Policy</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="min-h-screen">
         <section className="text-gray-600 body-font">
           <div className="py-24 mx-auto">

@@ -1,9 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const About = () => {
   return (
     <>
+      <Head>
+        <title>About Us</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="min-h-screen container mx-auto">
         <section className="text-gray-600 body-font">
           <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">

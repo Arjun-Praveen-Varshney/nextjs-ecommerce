@@ -1,8 +1,16 @@
 import React from "react";
+import Head from "next/head";
 
 const returnpolicy = () => {
   return (
     <>
+      <Head>
+        <title>Return Policy</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="min-h-screen">
         <section className="text-gray-600 body-font py-10">
           <div className="py-2 mx-auto">

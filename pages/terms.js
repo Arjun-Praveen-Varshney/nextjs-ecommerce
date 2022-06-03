@@ -1,8 +1,16 @@
 import React from "react";
+import Head from "next/head";
 
 const terms = () => {
   return (
     <>
+      <Head>
+        <title>Terms and Conditions</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="min-h-screen">
         <section className="text-gray-600 body-font">
           <div className="text-black-600 mx-2 md:mx-10 my-2 py-24">

@@ -1,8 +1,16 @@
 import React from "react";
+import Head from "next/head";
 
 const Contact = () => {
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>Contact Us</title>
+        <meta
+          name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0"
+        />
+      </Head>
       <div className="max-w-screen-xl md:mt-24 px-4 md:px-8 lg:px-12 xl:px-26 py-16 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
         <div className="flex flex-col justify-center items-center">
           <div>
