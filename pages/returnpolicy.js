@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
-const returnpolicy = () => {
+const ReturnPolicy = () => {
   return (
     <>
       <Head>
@@ -60,4 +60,4 @@ const returnpolicy = () => {
   );
 };
 
-export default returnpolicy;
+export default ReturnPolicy;

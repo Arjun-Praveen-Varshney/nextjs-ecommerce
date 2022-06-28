@@ -5,7 +5,7 @@ import Product from "../models/Product";
 import mongoose from "mongoose";
 import Head from "next/head";
 
-const stickers = ({ products }) => {
+const Stickers = ({ products }) => {
   return (
     <div>
       <Head>
@@ -143,4 +143,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default stickers;
+export default Stickers;

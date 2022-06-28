@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Head from "next/head";
 
-const privacypolicy = () => {
+const PrivacyPolicy = () => {
   return (
     <>
       <Head>
@@ -599,4 +599,4 @@ const privacypolicy = () => {
   );
 };
 
-export default privacypolicy;
+export default PrivacyPolicy;
