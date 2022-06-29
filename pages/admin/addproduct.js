@@ -103,8 +103,8 @@ const Addproduct = () => {
     setsize("");
     setcolor("");
     setimg("");
-    setprice("");
-    setavailableQty("");
+    setprice(0);
+    setavailableQty(0);
     setcategory("");
   };
 
