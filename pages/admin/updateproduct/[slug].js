@@ -21,8 +21,10 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Product from "../../../models/Product";
 import mongoose from "mongoose";
+import { useRouter } from "next/router";
 
 const UpdateProduct = ({ product }) => {
+  const router = useRouter();
   const [title, settitle] = useState("");
   const [slug, setslug] = useState("");
   const [img, setimg] = useState("");
@@ -112,6 +114,53 @@ const UpdateProduct = ({ product }) => {
     setprice(0);
     setavailableQty(0);
     setcategory("");
+  };
+
+  const deleteEntry = async () => {
+    let conf = confirm("Are you sure you want to delete this entry?");
+    if (conf === true) {
+      // return
+      let data = [
+        {
+          _id: product._id,
+        },
+      ];
+      let a = await fetch(
+        `${process.env.NEXT_PUBLIC_HOST}/api/deleteproducts`,
+        {
+          method: "DELETE", // or 'PUT'
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+      let res = await a.json();
+      if (res.success) {
+        toast.success("Product deleted!", {
+          position: "top-left",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setTimeout(() => {
+          router.push("/admin/allproducts");
+        }, 2000);
+      } else {
+        toast.error("Some error occurred!", {
+          position: "top-left",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+    }
   };
 
   return (
@@ -253,6 +302,20 @@ const UpdateProduct = ({ product }) => {
               <br />
               <Button onClick={submitForm} variant="outlined" mt={2}>
                 Submit
+              </Button>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <Button
+                fullWidth
+                onClick={deleteEntry}
+                variant="outlined"
+                color="error"
+                mt={2}
+              >
+                Delete Product
               </Button>
             </BaseCard>
           </Grid>
