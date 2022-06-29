@@ -19,6 +19,7 @@ import BaseCard from "../../src/components/baseCard/BaseCard";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 const Addproduct = () => {
   const [title, settitle] = useState("");
@@ -110,6 +111,9 @@ const Addproduct = () => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Add Product</title>
+      </Head>
       <style jsx global>
         {`
           footer {

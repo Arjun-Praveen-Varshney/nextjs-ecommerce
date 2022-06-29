@@ -8,6 +8,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../src/theme/theme";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Index() {
   const router = useRouter();
@@ -20,6 +21,9 @@ export default function Index() {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Admin Dashboard</title>
+      </Head>
       <style jsx global>
         {`
           footer {

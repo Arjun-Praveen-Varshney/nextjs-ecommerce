@@ -6,10 +6,14 @@ import { Grid } from "@mui/material";
 import AllOrders from "../../src/components/dashboard/AllOrders";
 import Order from "../../models/Order";
 import mongoose from "mongoose";
+import Head from "next/head";
 
 const Allorders = ({ orders }) => {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>All Orders</title>
+      </Head>
       <style jsx global>
         {`
           footer {

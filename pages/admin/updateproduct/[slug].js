@@ -22,6 +22,7 @@ import "react-toastify/dist/ReactToastify.css";
 import Product from "../../../models/Product";
 import mongoose from "mongoose";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 const UpdateProduct = ({ product }) => {
   const router = useRouter();
@@ -165,6 +166,9 @@ const UpdateProduct = ({ product }) => {
 
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Update Product</title>
+      </Head>
       <style jsx global>
         {`
           footer {

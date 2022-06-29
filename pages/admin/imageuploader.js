@@ -4,6 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "../../src/theme/theme";
 import { Grid, ImageList, ImageListItem } from "@mui/material";
 import BaseCard from "../../src/components/baseCard/BaseCard";
+import Head from "next/head";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -93,6 +94,9 @@ const itemData = [
 const ImageUploader = () => {
   return (
     <ThemeProvider theme={theme}>
+      <Head>
+        <title>Image Uploader</title>
+      </Head>
       <style jsx global>
         {`
           footer {
