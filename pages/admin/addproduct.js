@@ -23,24 +23,23 @@ import "react-toastify/dist/ReactToastify.css";
 const Addproduct = () => {
   const [title, settitle] = useState("");
   const [slug, setslug] = useState("");
-  const [image, setimage] = useState("");
+  const [img, setimg] = useState("");
   const [category, setcategory] = useState("");
-  const [description, setdescription] = useState("");
+  const [desc, setdesc] = useState("");
   const [color, setcolor] = useState("");
   const [size, setsize] = useState("");
-  const [price, setprice] = useState("");
-  const [availableQty, setavailableQty] = useState("");
-  // const [form, setform] = useState({});
+  const [price, setprice] = useState(0);
+  const [availableQty, setavailableQty] = useState(0);
 
   const handleChange = (e) => {
     if (e.target.name == "title") {
       settitle(e.target.value);
     } else if (e.target.name == "slug") {
       setslug(e.target.value);
-    } else if (e.target.name == "description") {
-      setdescription(e.target.value);
-    } else if (e.target.name == "image") {
-      setimage(e.target.value);
+    } else if (e.target.name == "desc") {
+      setdesc(e.target.value);
+    } else if (e.target.name == "img") {
+      setimg(e.target.value);
     } else if (e.target.name == "category") {
       setcategory(e.target.value);
     } else if (e.target.name == "price") {
@@ -52,24 +51,23 @@ const Addproduct = () => {
     } else if (e.target.name == "availableQty") {
       setavailableQty(e.target.value);
     }
-    // setform({ ...form, [e.target.name]: e.target.value });
   };
 
-  const submitForm = async () => {
-    // e.preventDefault();
-    // let res;
-    let data = {
-      title: title,
-      slug: slug,
-      description: description,
-      image: image,
-      category: category,
-      size: size,
-      color: color,
-      price: price,
-      availableQty: availableQty,
-      // form,
-    };
+  const submitForm = async (e) => {
+    e.preventDefault();
+    let data = [
+      {
+        title,
+        slug,
+        desc,
+        img,
+        category,
+        size,
+        color,
+        price,
+        availableQty,
+      },
+    ];
     let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addproducts`, {
       method: "POST", // or 'PUT'
       headers: {
@@ -101,14 +99,13 @@ const Addproduct = () => {
     }
     settitle("");
     setslug("");
-    setdescription("");
+    setdesc("");
     setsize("");
     setcolor("");
-    setimage("");
+    setimg("");
     setprice("");
     setavailableQty("");
     setcategory("");
-    // setform({});
   };
 
   return (
@@ -139,7 +136,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={title}
-                  // value={form.title ? form.title : ""}
                   name="title"
                   label="Title"
                   variant="outlined"
@@ -147,16 +143,14 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={slug}
-                  // value={form.slug ? form.slug : ""}
                   name="slug"
                   label="Slug"
                   variant="outlined"
                 />
                 <TextField
                   onChange={handleChange}
-                  value={description}
-                  // value={form.description ? form.description : ""}
-                  name="description"
+                  value={desc}
+                  name="desc"
                   label="Description"
                   multiline
                   rows={4}
@@ -164,9 +158,8 @@ const Addproduct = () => {
 
                 <TextField
                   onChange={handleChange}
-                  value={image}
-                  // value={form.image ? form.image : ""}
-                  name="image"
+                  value={img}
+                  name="img"
                   label="Image URL"
                   variant="outlined"
                 />
@@ -174,7 +167,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={category}
-                  // value={form.category ? form.category : ""}
                   name="category"
                   label="Category"
                   variant="outlined"
@@ -183,7 +175,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={color}
-                  // value={form.color ? form.color : ""}
                   name="color"
                   label="Color"
                   variant="outlined"
@@ -192,7 +183,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={size}
-                  // value={form.size ? form.size : ""}
                   name="size"
                   label="Size"
                   variant="outlined"
@@ -201,7 +191,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={price}
-                  // value={form.price ? form.price : ""}
                   name="price"
                   label="Price"
                   variant="outlined"
@@ -209,7 +198,6 @@ const Addproduct = () => {
                 <TextField
                   onChange={handleChange}
                   value={availableQty}
-                  // value={form.availableQty ? form.availableQty : ""}
                   name="availableQty"
                   label="Available Quantity"
                   variant="outlined"
