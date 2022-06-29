@@ -25,28 +25,24 @@ import mongoose from "mongoose";
 const UpdateProduct = ({ product }) => {
   const [title, settitle] = useState("");
   const [slug, setslug] = useState("");
-  const [image, setimage] = useState("");
+  const [img, setimg] = useState("");
   const [category, setcategory] = useState("");
-  const [description, setdescription] = useState("");
+  const [desc, setdesc] = useState("");
   const [color, setcolor] = useState("");
   const [size, setsize] = useState("");
-  const [price, setprice] = useState("");
-  const [availableQty, setavailableQty] = useState("");
-  const [__v, set__v] = useState("");
+  const [price, setprice] = useState(0);
+  const [availableQty, setavailableQty] = useState(0);
   const [_id, set_id] = useState("");
-  const [createdAt, setcreatedAt] = useState("");
-  const [updatedAt, setupdatedAt] = useState("");
-  // const [form, setform] = useState({});
 
   const handleChange = (e) => {
     if (e.target.name == "title") {
       settitle(e.target.value);
     } else if (e.target.name == "slug") {
       setslug(e.target.value);
-    } else if (e.target.name == "description") {
-      setdescription(e.target.value);
-    } else if (e.target.name == "image") {
-      setimage(e.target.value);
+    } else if (e.target.name == "desc") {
+      setdesc(e.target.value);
+    } else if (e.target.name == "img") {
+      setimg(e.target.value);
     } else if (e.target.name == "category") {
       setcategory(e.target.value);
     } else if (e.target.name == "price") {
@@ -57,37 +53,27 @@ const UpdateProduct = ({ product }) => {
       setsize(e.target.value);
     } else if (e.target.name == "availableQty") {
       setavailableQty(e.target.value);
-    } else if (e.target.name == "__v") {
-      set__v(e.target.value);
     } else if (e.target.name == "_id") {
       set_id(e.target.value);
-    } else if (e.target.name == "createdAt") {
-      setcreatedAt(e.target.value);
-    } else if (e.target.name == "updatedAt") {
-      setupdatedAt(e.target.value);
     }
-    // setform({ ...form, [e.target.name]: e.target.value });
   };
 
   const submitForm = async (e) => {
     e.preventDefault();
-    // let res;
-    let data = {
-      _id: product._id,
-      title: product.title,
-      slug: product.slug,
-      desc: product.desc,
-      img: product.img,
-      category: product.category,
-      size: product.size,
-      color: product.color,
-      price: product.price,
-      availableQty: product.availableQty,
-      createdAt: product.createdAt,
-      updatedAt: product.updatedAt,
-      __v: product.__v,
-      // form,
-    };
+    let data = [
+      {
+        _id: product._id,
+        title,
+        slug,
+        desc,
+        img,
+        category,
+        size,
+        color,
+        price,
+        availableQty,
+      },
+    ];
     let a = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/updateproducts`, {
       method: "POST", // or 'PUT'
       headers: {
@@ -117,20 +103,15 @@ const UpdateProduct = ({ product }) => {
         progress: undefined,
       });
     }
-    set_id("");
     settitle("");
     setslug("");
-    setdescription("");
+    setdesc("");
     setsize("");
     setcolor("");
-    setimage("");
-    setprice("");
-    setavailableQty("");
+    setimg("");
+    setprice(0);
+    setavailableQty(0);
     setcategory("");
-    setcreatedAt("");
-    setupdatedAt("");
-    set__v("");
-    // setform({});
   };
 
   return (
@@ -161,86 +142,88 @@ const UpdateProduct = ({ product }) => {
                 <TextField
                   onChange={handleChange}
                   value={product._id}
-                  // value={form._id ? form._id : ""}
                   name="_id"
                   label="Id"
                   variant="outlined"
                 />
                 <TextField
+                  required
+                  helperText={product.title}
                   onChange={handleChange}
-                  // value={title}
-                  defaultValue={product.title}
-                  // value={form.title ? form.title : ""}
+                  value={title}
                   name="title"
                   label="Title"
                   variant="outlined"
                 />
                 <TextField
+                  required
                   onChange={handleChange}
-                  defaultValue={product.slug}
-                  // value={form.slug ? form.slug : ""}
+                  helperText={product.slug}
+                  value={slug}
                   name="slug"
                   label="Slug"
                   variant="outlined"
                 />
                 <TextField
                   onChange={handleChange}
-                  defaultValue={product.desc}
-                  // value={form.description ? form.description : ""}
-                  name="description"
+                  placeholder={product.desc}
+                  value={desc}
+                  name="desc"
                   label="Description"
                   multiline
                   rows={4}
                 />
 
                 <TextField
+                  required
                   onChange={handleChange}
-                  defaultValue={product.img}
-                  // value={form.image ? form.image : ""}
-                  name="image"
+                  placeholder={product.img}
+                  value={img}
+                  name="img"
                   label="Image URL"
                   variant="outlined"
                 />
 
                 <TextField
+                  required
+                  placeholder={product.category}
                   onChange={handleChange}
-                  defaultValue={product.category}
-                  // value={form.category ? form.category : ""}
+                  value={category}
                   name="category"
                   label="Category"
                   variant="outlined"
                 />
 
                 <TextField
+                  placeholder={product.color}
                   onChange={handleChange}
-                  defaultValue={product.color}
-                  // value={form.color ? form.color : ""}
+                  value={color}
                   name="color"
                   label="Color"
                   variant="outlined"
                 />
 
                 <TextField
+                  placeholder={product.size}
                   onChange={handleChange}
-                  defaultValue={product.size}
-                  // value={form.size ? form.size : ""}
+                  value={size}
                   name="size"
                   label="Size"
                   variant="outlined"
                 />
 
                 <TextField
+                  helperText={product.price}
                   onChange={handleChange}
-                  defaultValue={product.price}
-                  // value={form.price ? form.price : ""}
+                  value={price}
                   name="price"
                   label="Price"
                   variant="outlined"
                 />
                 <TextField
+                  helperText={product.availableQty}
                   onChange={handleChange}
-                  defaultValue={product.availableQty}
-                  // value={form.availableQty ? form.availableQty : ""}
+                  value={availableQty}
                   name="availableQty"
                   label="Available Quantity"
                   variant="outlined"
@@ -248,7 +231,6 @@ const UpdateProduct = ({ product }) => {
                 <TextField
                   onChange={handleChange}
                   value={product.createdAt}
-                  // value={form.createdAt ? form.createdAt : ""}
                   name="createdAt"
                   label="Created At"
                   variant="outlined"
@@ -256,7 +238,6 @@ const UpdateProduct = ({ product }) => {
                 <TextField
                   onChange={handleChange}
                   value={product.updatedAt}
-                  // value={form.updatedAt ? form.updatedAt : ""}
                   name="updatedAt"
                   label="Updated At"
                   variant="outlined"
@@ -264,7 +245,6 @@ const UpdateProduct = ({ product }) => {
                 <TextField
                   onChange={handleChange}
                   value={product.__v}
-                  // value={form.__v ? form.__v : ""}
                   name="__v"
                   label="Version"
                   variant="outlined"
