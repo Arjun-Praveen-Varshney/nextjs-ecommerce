@@ -67,7 +67,7 @@ const UpdateProduct = ({ product }) => {
       {
         _id: product._id,
         title,
-        slug,
+        slug: product.slug,
         desc,
         img,
         category,
@@ -107,7 +107,6 @@ const UpdateProduct = ({ product }) => {
       });
     }
     settitle("");
-    setslug("");
     setdesc("");
     setsize("");
     setcolor("");
@@ -149,7 +148,7 @@ const UpdateProduct = ({ product }) => {
         });
         setTimeout(() => {
           router.push("/admin/allproducts");
-        }, 2000);
+        }, 1000);
       } else {
         toast.error("Some error occurred!", {
           position: "top-left",
@@ -209,10 +208,8 @@ const UpdateProduct = ({ product }) => {
                   variant="outlined"
                 />
                 <TextField
-                  required
                   onChange={handleChange}
-                  helperText={product.slug}
-                  value={slug}
+                  value={product.slug}
                   name="slug"
                   label="Slug"
                   variant="outlined"
